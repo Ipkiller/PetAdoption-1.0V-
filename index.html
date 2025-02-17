@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f42eb0fb27.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+
+<body>
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+
+                <!-- Logo -->
+                <a href="/" class="text-xl font-bold text-gray-800 flex items-center gap-2">
+                    <img src="src/logo.png" alt="Logo" style="height: min(
+                        4.2rem,15.811764705882352941176470588235vw
+                    );">
+                    <span class="text-2xl" style="font-family: 'Dancing Script', cursive;">Pet Adoption</span>
+                </a>
+
+                <!-- Navigation Links with Hover Effects (Underline or Border) -->
+                <div class="hidden lg:flex space-x-6 text-lg">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 hover:underline">
+                        <i class="fas fa-home"></i>
+                        Home</a>
+                    <a href="adopt.html" class="text-gray-700 hover:text-blue-600 hover:underline">
+                        <i class="fas fa-paw"></i>
+                        Adopt</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 hover:underline">
+                        <i class="fas fa-info-circle"></i>
+                        About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 hover:underline">
+                        <i class="fas fa-envelope"></i>
+                        Contact</a>
+                </div>
+
+
+                <!-- Buttons Group (Favorite, Profile, Add Pet) -->
+                <div class="flex md:gap-6">
+
+                    <!-- Add Pet Icon -->
+                    <a href="add-pet.html"
+                        style="
+                padding: min(0.5rem,1.8823529411764705882352941176471vw) min(1rem, 3.6764705882352941176470588235294vw)"
+                        class="bg-orange-500 text-white rounded-lg text-lg font-semibold hover:bg-orange-600 transition duration-300 flex items-center justify-center">
+                        <i class="fas fa-paw mr-2"></i> Post pet
+                    </a>
+
+                    <!-- Favorite Icon -->
+                    <a href="favorites.html"
+                        class="bg-yellow-500 hidden text-white p-3 rounded-full hover:bg-yellow-600 transition duration-300 md:flex items-center justify-center">
+                        <i class="fas fa-heart text-2xl"></i>
+                    </a>
+
+
+
+                    <!-- Profile Icon with Dropdown -->
+                    <div class="relative group hidden md:block">
+                        <!-- Profile Button -->
+                        <div
+                            class="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition duration-300 md:flex items-center justify-center">
+                            <i class="fas fa-user text-2xl"></i>
+                        </div>
+
+                        <!-- Profile Dropdown -->
+                        <div
+                            class="dropdown-content hidden absolute right-0 z-10 bg-white border border-gray-300 shadow-2xl min-w-36 group-hover:block">
+                            <a href="profile.html" class="block px-4 py-2 hover:bg-gray-100">My Profile</a>
+                            <a href="settings.html" class="block px-4 py-2 hover:bg-gray-100">Settings</a>
+                            <a href="logout.html" class="block px-4 py-2 hover:bg-gray-100">Sign Out</a>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <button class="hidden md:block lg:hidden menu-btn text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+
+                </div>
+                <button class=" md:hidden menu-btn text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div id="mobile-menu"
+            class="shadow-2xl border-2 z-30 border-gray-200 rounded-b-3xl p-3 space-y-1 bg-white text-base fixed top-20 -right-full transition-all ease-in-out duration-300">
+            <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <i class="fas fa-home mr-2"></i>
+                Home</a>
+            <a href="adopt.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <i class="fas fa-paw mr-2"></i>
+                Adopt</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <i class="fas fa-info-circle mr-2"></i>
+                About</a>
+            <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <i class="fas fa-envelope mr-2"></i>
+                Contact</a>
+            <a href="favorites.html" class="block px-4 py-2 md:hidden rounded-lg bg-yellow-500 text-white text-center">
+                <i class="fas fa-heart mr-2"></i> Favorites
+            </a>
+            <a href="profile.html" class="block px-4 py-2 md:hidden rounded-lg bg-blue-500 text-white text-center">
+                <i class="fas fa-user mr-2"></i> Profile
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="max-w-7xl mx-auto relative">
+        <!-- Search Bar (On Top) -->
+        <div class="absolute top-10 left-1/2 transform -translate-x-1/2 z-20">
+            <input type="text" placeholder="Search..."
+                class="w-[90vw] md:w-96 px-4 py-3 rounded-lg bg-white text-gray-900 shadow-lg focus:outline-none focus:ring focus:ring-gray-300">
+        </div>
+
+        <!-- Slider Container -->
+        <div class="relative overflow-hidden w-full h-96">
+            <!-- Dark Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent z-10"></div>
+
+
+            <!-- Image Slider -->
+            <div id="img-slider" class="flex transition-transform duration-700 ease-in-out"></div>
+        </div>
+
+        <!-- slogan -->
+        <div class="absolute top-60 left-1/2 transform -translate-x-1/2 z-20 text-center text-white text-nowrap">
+            <h2 class="text-2xl font-bold">Adopt Love, Find Your Best Friend!</h2>
+            <!-- Additional Line of Text -->
+            <p class="mt-4 text-lg font-light">A new furry friend is waiting for you!</p>
+        </div>
+        <!-- Pet Cards Section -->
+        <section class="py-12 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <h3 class="text-3xl font-semibold text-center text-gray-800 mb-8">Adopt a Pet Today!</h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/300" alt="Pet 1" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-xl font-semibold text-gray-800">Bella</h4>
+                            <p class="text-gray-600">Breed: Labrador Retriever</p>
+                            <p class="text-gray-600">Age: 2 years</p>
+                            <button class="mt-4 text-white bg-yellow-500 hover:bg-yellow-600 rounded-lg py-2 px-4">
+                                <i class="fas fa-heart"></i> Add to Favorites
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/300" alt="Pet 2" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-xl font-semibold text-gray-800">Max</h4>
+                            <p class="text-gray-600">Breed: German Shepherd</p>
+                            <p class="text-gray-600">Age: 4 years</p>
+                            <button class="mt-4 text-white bg-yellow-500 hover:bg-yellow-600 rounded-lg py-2 px-4">
+                                <i class="fas fa-heart"></i> Add to Favorites
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/300" alt="Pet 3" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-xl font-semibold text-gray-800">Luna</h4>
+                            <p class="text-gray-600">Breed: Beagle</p>
+                            <p class="text-gray-600">Age: 1 year</p>
+                            <button class="mt-4 text-white bg-yellow-500 hover:bg-yellow-600 rounded-lg py-2 px-4">
+                                <i class="fas fa-heart"></i> Add to Favorites
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Section Below Slider -->
+        <section class="py-16">
+            <div class="text-center">
+                <h3 class="text-3xl font-semibold text-gray-800">Join Our Community</h3>
+                <p class="mt-4 text-lg text-gray-600">Become part of the growing community of pet lovers and help
+                    animals find their forever homes.</p>
+                <div class="mt-8">
+                    <a href="signup.html"
+                        class="px-8 py-3 bg-blue-500 text-white rounded-lg text-lg font-semibold hover:bg-blue-600 transition duration-300">Join
+                        Us</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg">&copy; 2025 Pet Adoption. All rights reserved.</p>
+            <div class="mt-4 space-x-6">
+                <a href="https://facebook.com" target="_blank" class="text-xl hover:text-blue-500">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="text-xl hover:text-blue-400">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-xl hover:text-pink-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-xl hover:text-blue-700">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script src="src/index.js"></script>
+
+</body>
+
+</html>

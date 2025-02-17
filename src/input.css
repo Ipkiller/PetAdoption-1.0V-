@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+html,
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+@theme {
+  --text-xs: min(0.75rem, 2.823529411764706vw);
+  --text-sm: min(0.875rem, 3.294117647058824vw);
+  --text-base: min(1rem, 3.764705882352941vw);
+  --text-lg: min(1.125rem, 4.235294117647059vw);
+  --text-xl: min(1.25rem, 4.705882352941176vw);
+  --text-2xl: min(1.5rem, 5.647058823529412vw);
+  --text-3xl: min(1.875rem, 7.058823529411765vw);
+  --text-4xl: min(2.25rem, 8.470588235294118vw);
+  --text-5xl: min(3rem, 11.29411764705882vw);
+  --text-6xl: min(3.75rem, 14.11764705882353vw);
+}
+
+.dropdown-content a {
+  @apply no-underline text-gray-700 block px-4 py-2 hover:bg-gray-200;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
